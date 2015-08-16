@@ -1,0 +1,13 @@
+<div class="container-fluid container-home">
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+    <h1 class="home">Enter your Twitter Handle</h1>
+    <br><br>
+    <%= form_for :user do |f| %>
+      <%= f.text_field :twitter, placeholder: "@your_twitter_account", class: "form-control" %><br><br>
+      <%= f.submit "Update Twitter Handle", class: "btn btn-lg btn-default btn-home" %>
+    <% end %>
+  </div>
+  <div class="col-md-2"></div>
+</div>
+
