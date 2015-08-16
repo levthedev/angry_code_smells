@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
     @user = User.find_or_create_from_oauth(oauth)
     if @user
       session[:user_id] = @user.id
-      redirect_to root_path
+      redirect_to dashboard_path
     else
       redirect_to root_path
     end
@@ -13,6 +13,7 @@ class SessionsController < ApplicationController
     session.clear
     redirect_to root_path
   end
+
   private
 
   def oauth
