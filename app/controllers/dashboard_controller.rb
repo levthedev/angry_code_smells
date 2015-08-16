@@ -1,6 +1,5 @@
 class DashboardController < ApplicationController
   def show
-    @feed = client.user_events(current_user.nickname)
   end
 
   def client
