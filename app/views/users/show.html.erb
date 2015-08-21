@@ -12,6 +12,9 @@
       <%= f.submit "Update Twitter Handle", class: "btn btn-lg btn-default btn-home" %>
     <% end %>
     <br>
+    <% current_user.repos.each do |repo|%>
+      <%= current_user.pull_request_comments(repo) %>
+    <% end %>
   </div>
   <div class="col-md-2"></div>
 </div>
